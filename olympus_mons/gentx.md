@@ -22,6 +22,22 @@ go version
 # Should return go version go1.17 linux/amd64
 ```
 
+Having the environment variable `GOPATH` set will be helpful for the next steps.
+If it is not set, you can find the path to your go install by running
+
+```sh
+which go
+# Should return something like /usr/local/go/bin/go
+```
+
+and add the following to your shell profile:
+
+```sh
+export GOROOT=/usr/local/go
+export GOPATH=$GOROOT/bin
+export PATH=$PATH:$GOPATH
+```
+
 ## Instructions (Until November 19, 2021 12:00 PST)
 
 These instructions are written targeting an Ubuntu 20.04 system.  Relevant changes to commands should be made depending on the OS/architecture you are running on.
